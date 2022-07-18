@@ -152,7 +152,7 @@ router.post('/approve', async (ctx)=>{
           action: '通过'
         })
         const curAuditUserName = doc.auditFlows[auditLogs.length].userName
-        await Leaves.findByIdAndUpdate(_id, { applyState: 2, auditLogs, curAuditUserName})
+        await Leaves.findByIdAndUpdate(_id, { applyState: 4, auditLogs, curAuditUserName})
       }
     }
     ctx.body = utils.success("", "处理成功");

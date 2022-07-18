@@ -1,16 +1,20 @@
 const mongoose = require('mongoose')
 const leavesSchema = mongoose.Schema({
     orderNo: String,
-    applyType: Number,
-    startTime: { type: Date, default: Date.now },
-    endTime: { type: Date, default: Date.now },
+    dataClass: Number,
+    dataItem: String,
+    dataCategory: Number,
+    dataLevel: Number,
+    dept: String,
+    person: String,
+    personPhone: String,
+    applyTime: Date,
+    reasons: String,
     applyUser: {
         userId: String,
         userName: String,
         userEmail: String
     },
-    leaveTime: String,
-    reasons: String,
     auditUsers: String,
     curAuditUserName: String,
     auditFlows: [
